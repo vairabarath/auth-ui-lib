@@ -1,22 +1,22 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": false,
-    "outDir": "./dist",
-    "declaration": true,
-    "jsx": "react-jsx"
+    "target": "ES5", // Target ES5 for compatibility
+    "module": "ESNext", // Use ESNext for the module system
+    "lib": ["DOM", "DOM.Iterable", "ESNext"], // Include necessary libraries
+    "allowJs": true, // Allow JavaScript files
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "esModuleInterop": true, // Enable interoperability between CommonJS and ES Modules
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
+    "strict": true, // Enable strict type-checking options
+    "forceConsistentCasingInFileNames": true, // Enforce consistent file casing
+    "noFallthroughCasesInSwitch": true, // Disallow fallthrough cases in switch statements
+    "moduleResolution": "Node", // Resolve modules using Node.js style
+    "resolveJsonModule": true, // Allow importing .json files
+    "isolatedModules": true, // Treat each file as a separate module
+    "declaration": true, // Generate .d.ts files for type declarations
+    "declarationDir": "dist", // Output directory for declaration files
+    "outDir": "./dist", // Output directory for compiled JavaScript files
+    "jsx": "react-jsx" // Enable JSX transformation with React
   },
-  "include": ["src"]
+  "include": ["src"] // Include all TypeScript files in the src folder
 }

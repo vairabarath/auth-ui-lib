@@ -1,46 +1,91 @@
-# Getting Started with Create React App
+# Auth UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+`Auth UI` is a customizable authentication user interface package built with **React** and **Tailwind CSS**. This package provides easy-to-use Login and Register forms that can be quickly integrated into any React project. Tailored for developers who need an elegant and responsive authentication UI, this package offers customization flexibility to match your project's design.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **LoginForm** and **RegisterForm** components
+- Styled with **Tailwind CSS**
+- Fully customizable UI through props
+- **TypeScript** support
+- Lightweight and easy to integrate
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Install the package via npm:
 
-### `npm test`
+```bash
+npm install e-com-auth-ui
+||
+yarn add e-com-auth-ui
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+Import the components into your project and customize them as needed.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Example Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Here is a simple example of how to use the LoginForm and RegisterForm components:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+import React from "react";
+import { LoginForm, RegisterForm } from "your-unique-auth-ui-name";
 
-### `npm run eject`
+const App = () => {
+const customStyle = {
+form: "bg-gray-100 p-4 rounded-lg shadow-md",
+input: "border p-2 w-full rounded-md mb-4",
+button: "bg-blue-500 text-white p-2 rounded-lg"
+};
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+return (
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<div className="container mx-auto">
+<h1 className="text-3xl font-bold mb-6">Welcome to Auth UI</h1>
+<LoginForm customStyle={customStyle} />
+<RegisterForm customStyle={customStyle} />
+</div>
+);
+};
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+export default App;
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Customizing Styles
 
-## Learn More
+You can override the default styles by passing a customStyle object as a prop. Customize the styles for the form, input, and button using Tailwind CSS classes.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+const customStyle = {
+form: "custom-tailwind-classes",
+input: "custom-tailwind-classes",
+button: "custom-tailwind-classes"
+};
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Tailwind CSS Configuration
+
+If you need to extend or modify the default Tailwind configuration, you can do so by adjusting your tailwind.config.js
+
+```bash
+module.exports = {
+content: [
+"./src/**/*.{js,jsx,ts,tsx}",
+],
+theme: {
+extend: {},
+},
+plugins: [],
+};
+```
+
+# Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request or open an Issue on the GitHub repository. Make sure to follow the contribution guidelines.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
